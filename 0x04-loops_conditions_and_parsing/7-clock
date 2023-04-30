@@ -5,16 +5,18 @@
 #Inside the inner loop, a printf statement is used to format the output 
 #as a 2-digit hour value followed by a colon and a 2-digit minute value.
 
+
 hour=0
 minute=1
 
-while [ $hour -le 12 ]; do
-	echo "Hour: $hour"
-	while [ $minute -le 59 ]; do
-		echo $minute
-		minute=$((minute+1))
-	done
-	minute=$((1))
-	hour=$((i+1))
-done
+while [ $hour -lt 13 ]
+do
+  while [ $minute -lt 60 ]
+  do
+    printf "%02d:%02d\n" $hour $minute
+    ((minute++))
+  done
+  minute=0
+  ((hour++))
+done | head -n 70
 
