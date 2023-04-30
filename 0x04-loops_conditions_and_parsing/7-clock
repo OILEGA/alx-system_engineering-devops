@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+#The script starts a while loop that will continue to iterate as long as the value of the hour variable is less than 13.
+#Within the outer loop, a nested while loop is used to iterate over the values of minute. 
+#The inner loop will continue to iterate as long as the value of minute is less than 60.
+#Inside the inner loop, a printf statement is used to format the output 
+#as a 2-digit hour value followed by a colon and a 2-digit minute value.
+
+hour=0
+minute=1
+
+while [ $hour -lt 13 ]
+do
+  while [ $minute -lt 60 ]
+  do
+    printf "%02d:%02d\n" $hour $minute
+    ((minute++))
+  done
+  minute=0
+  ((hour++))
+done | head -n 70
+
