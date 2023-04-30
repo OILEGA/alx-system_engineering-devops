@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+#The script first sets the file variable to "school". Then an if statement is used to check
+#if the file exists using the -e option. If the file exists, the script checks if 
+#it is empty using the -s option. If the file is not empty, the script prints "school file is not empty".
+#Otherwise, the script prints "school file is empty". The script then checks if the file is a regular file
+#using the -f option. If the file is a regular file, the script prints "school is a regular file". 
+#Otherwise, nothing is printed.If the file does not exist, the script prints "school file does not exist".
+
+if [ -e "school" ]; then
+   echo "school file exists"
+
+   if [ -s "school" ]; then
+      echo "school file is not empty"
+   else
+      echo "school file is empty"
+   fi
+
+   if [ -f "school" ]; then
+      echo "school is a regular file"
+   fi
+else
+   echo "school file does not exist"
+fi
+
