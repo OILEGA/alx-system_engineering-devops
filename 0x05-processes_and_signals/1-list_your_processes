@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# This is a bash script that displays a list of currently running processes,
+# showing all processes for all users, including those which might not have a terminal type
+# in a user-oriented format and showing process hierarchy:The ps command is used to display 
+# information about currently running processes. The auxf options are used to display all processes (a),
+# for all users (u), in a full format (f) that includes process hierarchy information.
+
+ps auxf
