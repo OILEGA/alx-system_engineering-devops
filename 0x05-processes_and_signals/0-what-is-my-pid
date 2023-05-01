@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+#The $$ is a special variable in Bash that represents the PID (process ID) of the current shell.
+#By using echo to print the value of $$, the script will output its own PID when it is run.
+
+echo "The PID of this script is $$"
+
