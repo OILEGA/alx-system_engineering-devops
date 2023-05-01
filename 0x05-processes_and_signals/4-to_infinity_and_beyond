@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+#a Bash script that displays "To infinity and beyond" indefinitely, with a 2 second delay between each iteration of the loop
+#The while loop with true condition is used to create an infinite loop that will run continuously until interrupted. 
+#Within the loop, the echo command is used to display the message "To infinity and beyond" 
+#and the sleep command is used to introduce a 2 second delay between each iteration of the loop.
+
+while true
+do
+  echo "To infinity and beyond"
+  sleep 2
+done
