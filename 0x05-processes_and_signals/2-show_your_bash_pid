@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# displays lines containing the bash word.The ps command with the -ef options is used 
+# to show all processes in a long format that includes the command name.
+# The output is then piped (|) to the grep command, which searches for lines containing the word "bash".
+# shellcheck disable=SC2009. The # shellcheck disable=SC2009 comment is added to ignore a Shellcheck warning about using ps with grep
+
+ps -aux | grep bash
