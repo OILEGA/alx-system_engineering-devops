@@ -22,10 +22,10 @@ The database server manages and store databases, providing efficient storage and
 ## What is the server using to communicate with the computer of the user requesting the website?
 The server uses an internet network through the TCP/IP protocol suite to communicate with the computer of the user or client.
 ## ISSUES WITH THE INFRASTRUCTURE 
-	There are multiple SPOF (Single Point Of Failure) in this infrastructure. Eg: If the MYSQL database is down, the entire site would be down.
-	Downtime when maintenance is  needed. When we need to run some maintenance checks on 
-any component, they have to be put down or the server has to be turned off. Since there's only one server, the website would be experiencing a downtime.
-	Cannot scale if there's too much incoming traffic.
+There are multiple SPOF (Single Point Of Failure) in this infrastructure. Eg: If the MYSQL database is down, the entire site would be down.
+Downtime when maintenance is  needed. 
+When we need to run some maintenance checks on any component, they have to be put down or the server has to be turned off. Since there's only one server, the website would be experiencing a downtime.
+Cannot scale if there's too much incoming traffic.
 It would be hard to scale this infrastructure because one server contains the required components. The server can quickly run out of resources or slow down when it starts receiving a lot of requests.
 
 
