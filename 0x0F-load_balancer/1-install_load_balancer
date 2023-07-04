@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# Install and configure HAproxy on your lb-01 server.
+
+sudo apt-get update -y
+sudo apt-get install haproxy -y
+
+echo "
+frontend oilega.tech
+	bind *:80
+	default_backend Mena
+
+backend Mena
+	balance roundrobin
+	server 191210-web-01 18.233.62.144:80 check
+	server 18.233.62.144 35.153.255.28:80 check
+
+# Restart HAproxy service
+service haproxy restart 
+
+" >> /etc/haproxy/haproxy.cfg
