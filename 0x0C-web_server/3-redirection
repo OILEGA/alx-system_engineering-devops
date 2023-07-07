@@ -10,17 +10,17 @@ string_for_replacement="server_name _;\n\nlocation\/redirect_me {\n\treturn 301 
 sudo sed -i "$/server_name _:/$string_for_replacement"/g /etc/nginx/sites-enabled/default
 
 
-#mkdir /etc/nginx/html
-#touch /etc/nginx/html/index.html
-#echo "Hello Word!" > /etc/nginx/html/index.html
-#printf %s "server {
- #   listen 80;
-  #  listen [::]:80 default_server;
-   # root   /etc/nginx/html;
-    #index  index.html index.htm;
-    #location /redirect_me {
-     #   return 301 https://www.youtube.com/oilega;
-   # }
-#}" > /etc/nginx/sites-available/default
+mkdir /etc/nginx/html
+touch /etc/nginx/html/index.html
+echo "Hello Word!" > /etc/nginx/html/index.html
+printf %s "server {
+    listen 80;
+    listen [::]:80 default_server;
+    root   /etc/nginx/html;
+    index  index.html index.htm;
+    location /redirect_me {
+        return 301 https://www.youtube.com/oilega;
+    }
+}" > /etc/nginx/sites-available/default
 
 service nginx restart
