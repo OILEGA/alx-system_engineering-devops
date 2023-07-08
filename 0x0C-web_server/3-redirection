@@ -6,7 +6,7 @@ sudo apt-get update
 sudo apt-get install -y nginx
 
 
-string_for_replacement="server_name _;\n\nlocation\/redirect_me {\n\treturn 301 https:\/\/www.youtube.com;\n}"
+string_for_replacement="server_name _;\n\nlocation\/redirect_me {\n\treturn 301 https:\/\/www.google.com;\n}"
 sudo sed -i "$/server_name _:/$string_for_replacement"/g /etc/nginx/sites-enabled/default
 
 
@@ -19,7 +19,7 @@ printf %s "server {
     root   /etc/nginx/html;
     index  index.html index.htm;
     location /redirect_me {
-        return 301 https://www.youtube.com/oilega;
+        return 301 https://www.google.com/oilega;
     }
 }" > /etc/nginx/sites-available/default
 

@@ -18,7 +18,11 @@ echo "Hello World!" > /var/www/html/index.html
 
 # Add to the nginx configuration file a redirection to another page
 FIND=$(grep "redirect_me" /etc/nginx/sites-available/default)
+<<<<<<< HEAD
 STRING="\\\n\tlocation /redirect_me {\n\t\t return 301 https://www.google.com;\n"
+=======
+STRING="\\\n\tlocation /redirect_me {\n\t\t return 301 https://www.google.com;\n}"
+>>>>>>> f633e18147ff94513c5c80a16790e4ffa24ad432
 if [[ -z $FIND ]]; then
     sed -i "42i $STRING" /etc/nginx/sites-available/default
 fi
