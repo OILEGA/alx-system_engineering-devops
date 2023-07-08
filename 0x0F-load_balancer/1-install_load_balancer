@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
 #Installs and configures HAproxy in a load balancer server
 
+apt-get install -y software-properties-common
 sudo apt-get update -y
-sudo apt-get install haproxy -y
+sudo apt-get install -y 
 
 echo "ENABLED=1" >> /etc/default/haproxy
 mv /etc/haproxy/haproxy.cfg{,.original}
@@ -29,10 +30,8 @@ listen hbnb
     stats enable
     stats uri /haproxy?stats
     balance roundrobin
-    option httpclose
-    option forwardfor
     server 191210-web-01 18.233.62.144:80 check
     server 191210-web-02 35.153.255.28:80 check
 " >> /etc/haproxy/haproxy.cfg
 
-service haproxy start
+sudo service haproxy start
